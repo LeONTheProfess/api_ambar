@@ -9,6 +9,7 @@ POST https://host/api/registration
 | Заголовок           | Значение                       |
 |---------------------|--------------------------------|
 | Content-Type        | application/json              |
+| Authorization       | Bearer `<your-token>`         |
 
 ---
 
