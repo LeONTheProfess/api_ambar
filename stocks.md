@@ -36,7 +36,8 @@ GET https://host/api/stocks
                 "weight": 1.2,          // вес
                 "volume": 0.2,          // объём
                 "qty": 1,               // количество 
-                "image": "https://host/images/GRM000013.jpeg" // ссылка на фото грузового места
+                "image": "https://host/images/GRM000013.jpeg", // ссылка на фото грузового места
+                "status": "stored"      // состояние товара: stored (хранение) или ordered (в заказе)
             }
         ]
     }
