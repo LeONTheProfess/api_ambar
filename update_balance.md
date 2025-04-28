@@ -2,7 +2,7 @@
 
 Запрос на обновление баланса пользователя в системе ЕМЕ
 
-PUT https://host/api/update_balance
+PUT https://apiamb.kosmoslogistic.ru/api?command=update_balance
 
 ## Заголовки
 

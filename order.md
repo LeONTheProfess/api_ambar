@@ -2,7 +2,7 @@
 
 При запросе вернуть вещи формируется документ order в системе ЕМЕ
 
-POST https://host/api/order
+POST https://apiamb.kosmoslogistic.ru/api?command=order
 
 ## Заголовки
 

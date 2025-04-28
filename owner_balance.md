@@ -2,7 +2,7 @@
 
 Запрос на получение баланса из системы ЕМЕ
 
-GET https://host/api/owner_balance
+GET https://apiamb.kosmoslogistic.ru/api?command=owner_balance
 
 ## Заголовки
 

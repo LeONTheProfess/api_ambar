@@ -3,7 +3,7 @@
 При запросе забрать вещи формируется документ asn в системе ЕМЕ.  
 Вернём список таких запросов.
 
-GET https://host/api/asns
+GET https://apiamb.kosmoslogistic.ru/api?command=asns
 
 ## Заголовки
 

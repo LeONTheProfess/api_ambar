@@ -2,7 +2,7 @@
 
 Запрос на получение должников в системе ЕМЕ
 
-GET https://host/api/debtors
+GET https://apiamb.kosmoslogistic.ru/api?command=debtors
 
 ## Заголовки
 

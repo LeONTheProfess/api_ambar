@@ -2,7 +2,7 @@
 
 Запрос на хранимые вещи
 
-GET https://host/api/stocks
+GET https://apiamb.kosmoslogistic.ru/api?command=stocks
 
 ## Заголовки
 

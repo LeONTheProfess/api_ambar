@@ -2,7 +2,7 @@
 
 При запросе сдать вещи формируется документ ASN в системе ЕМЕ
 
-POST https://host/api/asn
+POST https://apiamb.kosmoslogistic.ru/api?command=asn
 
 ## Заголовки
 

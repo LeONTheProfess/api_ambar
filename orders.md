@@ -2,7 +2,7 @@
 
 Запрос возвратов товаров
 
-GET https://host/api/orders
+GET https://apiamb.kosmoslogistic.ru/api?command=orders
 
 ## Заголовки
 

@@ -2,7 +2,7 @@
 
 Запрос на оплату всех услуг пользователя в системе ЕМЕ
 
-POST https://host/api/pay_all_services
+POST https://apiamb.kosmoslogistic.ru/api?command=pay_all_services
 
 ## Заголовки
 

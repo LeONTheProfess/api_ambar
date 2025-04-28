@@ -2,7 +2,7 @@
 
 Запрос на регистрацию пользователя в системе ЕМЕ
 
-POST https://host/api/registration
+POST https://apiamb.kosmoslogistic.ru/api?command=registration
 
 ## Заголовки
 
