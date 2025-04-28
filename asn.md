@@ -9,7 +9,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=asn
 | Заголовок           | Значение                       |
 |---------------------|--------------------------------|
 | Content-Type        | application/json              |
-| Authorization       | Bearer `<your-token>`         |
+| Authorization       | `<your-token>`         |
 
 ---
 

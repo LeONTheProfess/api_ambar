@@ -8,7 +8,7 @@ GET https://apiamb.kosmoslogistic.ru/api?command=debtors
 
 | Заголовок           | Значение                       |
 |---------------------|--------------------------------|
-| Authorization       | Bearer `<your-token>`         |
+| Authorization       | `<your-token>`         |
 
 ---
 

@@ -9,7 +9,7 @@ PUT https://host/api/order/
 | Заголовок           | Значение                       |
 |---------------------|--------------------------------|
 | Content-Type        | application/json              |
-| Authorization       | Bearer `<your-token>`         |
+| Authorization       | `<your-token>`         |
 
 ---
 

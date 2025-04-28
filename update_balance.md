@@ -9,7 +9,7 @@ PUT https://apiamb.kosmoslogistic.ru/api?command=update_balance
 | Заголовок           | Значение                       |
 |---------------------|--------------------------------|
 | Content-Type        | application/json              |
-| Authorization       | Bearer `<your-token>`         |
+| Authorization       | `<your-token>`         |
 
 ---
 

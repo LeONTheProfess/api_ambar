@@ -9,7 +9,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=pay_all_services
 | Заголовок           | Значение                       |
 |---------------------|--------------------------------|
 | Content-Type        | application/json              |
-| Authorization       | Bearer `<your-token>`         |
+| Authorization       | `<your-token>`         |
 
 ---
 

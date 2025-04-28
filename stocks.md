@@ -9,7 +9,7 @@ GET https://apiamb.kosmoslogistic.ru/api?command=stocks
 | Заголовок           | Значение                       |
 |---------------------|--------------------------------|
 | Content-Type        | application/json              |
-| Authorization       | Bearer `<your-token>`         |
+| Authorization       | `<your-token>`         |
 
 
 ## Тело запроса
