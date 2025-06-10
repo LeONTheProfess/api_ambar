@@ -16,7 +16,6 @@ GET https://apiamb.kosmoslogistic.ru/api?command=stocks
 
 ```json
 {
-  "owner_id": "123"     // id клиента (обязательно)
 }
 ```
 ---

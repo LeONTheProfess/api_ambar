@@ -17,7 +17,6 @@ POST https://apiamb.kosmoslogistic.ru/api?command=asn
 
 ```json
 {
-  "owner_id": "123",                    // id клиента (обязательно)
   "comment": "Велосипед, диван",        // комментарий (не обязательно)
   "need_delivery": true,                // нужна доставка (обязательно)
   "plan_delivery_date": "27.11.2024",   // плановая дата доставки (обязательно)

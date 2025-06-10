@@ -2,7 +2,7 @@
 
 Метод позволяет изменить данные существующего заказа или отменить его.
 
-PUT https://host/api/order/
+POST https://apiamb.kosmoslogistic.ru/api?command=order
 
 ## Заголовки
 
