@@ -2,7 +2,7 @@
 
 Запрос на хранимые вещи
 
-GET https://apiamb.kosmoslogistic.ru/api?command=stocks
+POST https://apiamb.kosmoslogistic.ru/api?command=stocks
 
 ## Заголовки
 
@@ -11,12 +11,10 @@ GET https://apiamb.kosmoslogistic.ru/api?command=stocks
 | Content-Type        | application/json              |
 | Authorization       | `<your-token>`         |
 
-
 ## Тело запроса
 
 ```json
-{
-}
+{}
 ```
 ---
 
