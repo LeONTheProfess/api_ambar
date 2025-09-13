@@ -2,7 +2,7 @@
 
 Метод позволяет изменить данные существующего ASN или отменить его.
 
-PUT https://host/api/asn
+POST https://apiamb.kosmoslogistic.ru/api?command=asn
 
 ## Заголовки
 
@@ -17,7 +17,6 @@ PUT https://host/api/asn
 
 ```json
 {
-  "owner_id": "123",                    // id клиента (обязательно)
   "asn_no": "OF101010",                 // номер асн (обязательно)
   "comment": "Обновленный комментарий", // комментарий (не обязательно)
   "need_delivery": true,                // нужна доставка (не обязательно)

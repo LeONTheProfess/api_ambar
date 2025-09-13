@@ -1,19 +1,21 @@
-# Выход из системы (logout)
+# Выход из системы
 
-Позволяет завершить сессию пользователя и аннулировать токен авторизации.
+Выход пользователя из системы и инвалидация токена доступа.
 
 POST https://apiamb.kosmoslogistic.ru/api?command=logout
 
 ## Заголовки
 
-| Заголовок     | Значение         |
-|---------------|------------------|
-| Content-Type  | application/json |
-| Authorization | `<your-token>`   |
+| Заголовок           | Значение                       |
+|---------------------|--------------------------------|
+| Content-Type        | application/json              |
+| Authorization       | `<your-token>`         |
 
 ## Тело запроса
 
-Тело запроса отсутствует.
+```json
+{}
+```
 
 ---
 
@@ -21,34 +23,22 @@ POST https://apiamb.kosmoslogistic.ru/api?command=logout
 
 ### <span style="color: green;">200 OK</span>
 
-Успешный выход из системы. Тело ответа может быть пустым или содержать подтверждение:
+#### Тело ответа
 
 ```json
 {
-  "result": "ok"
+  "result": "Ok"
 }
 ```
 
 ---
 
 ### <span style="color: red;">401 Unauthorized</span>
-Токен не задан или не передан в заголовке Authorization.
-#### Тело ответа
+Неверный или отсутствующий токен авторизации.
+
 ```json
 {
-  "error": "access_denied",
-  "message": "Токен не задан."
-}
-```
-
----
-
-### <span style="color: red;">403 Forbidden</span>
-Токен невалиден или истёк срок действия.
-#### Тело ответа
-```json
-{
-  "error": "access_denied",
-  "message": "Причина ошибки авторизации"
+  "result": "error",
+  "message": "Unauthorized"
 }
 ```

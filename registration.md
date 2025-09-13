@@ -9,7 +9,6 @@ POST https://apiamb.kosmoslogistic.ru/api?command=registration
 | Заголовок           | Значение                       |
 |---------------------|--------------------------------|
 | Content-Type        | application/json              |
-| Authorization       | `<your-token>`         |
 
 ---
 
