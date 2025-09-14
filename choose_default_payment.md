@@ -1,8 +1,8 @@
-# Получить список способов оплаты (payment_methods)
+# Установить способ оплаты по умолчанию (choose_default_payment)
 
-Возвращает список сохранённых способов оплаты пользователя (банковских карт).
+Устанавливает сохранённый способ оплаты пользователя (банковскую карту) по умолчанию.
 
-GET https://apiamb.kosmoslogistic.ru/api?command=payment_methods
+POST https://apiamb.kosmoslogistic.ru/api?command=choose_default_payment
 
 ## Заголовки
 
@@ -11,11 +11,15 @@ GET https://apiamb.kosmoslogistic.ru/api?command=payment_methods
 | Content-Type  | application/json |
 | Authorization | `<your-token>`   |
 
+---
+
 ## Тело запроса
 
-Тело запроса отсутствует.
-
----
+```json
+{
+  "id": 123456 // id карты (обязательно)
+}
+```
 
 ## Ответы
 
@@ -23,22 +27,19 @@ GET https://apiamb.kosmoslogistic.ru/api?command=payment_methods
 
 ```json
 {
-  "payment_methods": [
-    {
-      "id": 123456,      // id карты
-      "type": "VISA",         // тип карты
-      "last_nums": "1234",     // последние 4 цифры
-      "default": true         // карта по умолчанию
-    }
-    // ...
-  ]
+  "result": "Ok",
 }
 ```
 
-Если у пользователя нет сохранённых карт:
+---
+
+### <span style="color: red;">400 Bad Request</span>
+Запрос содержит неправильные данные.
+#### Тело ответа
 ```json
 {
-  "payment_methods": [ ]
+  "error": "invalid_request",
+  "message": "Некорректный запрос. Поле id обязательно."
 }
 ```
 
@@ -69,11 +70,11 @@ GET https://apiamb.kosmoslogistic.ru/api?command=payment_methods
 ---
 
 ### <span style="color: red;">404 Not Found</span>
-Пользователь не найден.
+Карта с указанным id не найдена.
 #### Тело ответа
 ```json
 {
-  "error": "error",
-  "message": "Пользователь не найден"
+  "error": "not_found",
+  "message": "Карта с указанным id не найдена."
 }
 ```
