@@ -16,7 +16,8 @@ POST https://apiamb.kosmoslogistic.ru/api?command=make_payment
 ```json
 {
   "method_id": "123456", // id метода оплаты (банковская карта)
-  "amount": 1000.0            // сумма к списанию (обязательно)
+  "amount": 1000.0,      // сумма к списанию (обязательно)
+  "type": "services"     // services или storage
 }
 ```
 

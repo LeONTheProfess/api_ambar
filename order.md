@@ -32,7 +32,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=order
     "intercom": "123",                  // домофон (не обязательно)
     "elevator_type": "грузовой"         // тип лифта (не обязательно)
   },
-  "grms":["GRM000013", "GRM000014"]     // массив грузовых мест
+    "grms":[{"num": "GRM000013", "qty": 1}, {"num": "GRM000014", "qty": 2}]     // массив грузовых мест (num — номер, qty — количество)
 }
 ```
 
@@ -51,7 +51,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=order
     "name": "Джон Доу",                         // ФИО (обязательно)
     "car_num": "T123СТ777"                      // номер авто (обязательно)
   },
-  "grms":["GRM000013", "GRM000014"]             // массив грузовых мест
+    "grms":[{"num": "GRM000013", "qty": 1}, {"num": "GRM000014", "qty": 2}]             // массив грузовых мест (num — номер, qty — количество)
 }
 ```
 
