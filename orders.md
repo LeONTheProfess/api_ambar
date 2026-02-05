@@ -52,11 +52,26 @@ GET https://apiamb.kosmoslogistic.ru/api?command=orders
                 "plan_delivery_date": "27.11.2024",             // плановая дата отгрузки
                 "time_min": "9:00",                             // время от
                 "time_max": "13:00",                            // время до
-                "pass": // пропуск
+                "pass": // пропуск (устарело)
                 {
                     "name": "Джон Доу",     // ФИО водителя
                     "car_num": "T123СТ777"  // номер машины
                 },
+                "passes": [  // массив пропусков
+                    {
+                        "name": "test11",       // ФИО водителя
+                        "car_num": "234BAC961", // номер машины
+                        "main": true            // главный пропуск
+                    },
+                    {
+                        "name": "test22",
+                        "car_num": "234BAC962"
+                    },
+                    {
+                        "name": "test33",
+                        "car_num": "234BAC963"
+                    }
+                ],
                 "items":    // грузовые места
                 [
                     {
