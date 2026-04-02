@@ -80,6 +80,24 @@ GET https://apiamb.kosmoslogistic.ru/api?command=asns
                         "image": "https://host/images/GRM000013.jpeg"   // ссылка на картинку
                     }
                 ]
+            },
+            {
+                "asn_no": "ord124",                             // номер asn
+                "status": "DELIVERY",                           // статус
+                "comment": "Шкаф",                              // коммент
+                "need_delivery": true,                          // нужна доставка
+                "address_ref": 123,                        // реф адреса поставщика
+                "floor": "3",                                   // этаж
+                "entrance": "1",                                // подъезд
+                "intercom": "12345",                            // номер домофона
+                "elevator_type": "CARGO",                       // тип лифта
+                "full_address": "ул. Тверская, 1, м. Москва",   // полный адрес
+                "phone": "+7 (495) 123-45-67",                  // телефон
+                "name": "ООО Поставщик",                        // название поставщика
+                "active": true,                                 // активен ли адрес
+                "plan_delivery_date": "28.11.2024",             // плановая дата отгрузки
+                "time_min": "10:00",                            // время от
+                "time_max": "14:00",                            // время до
             }
         ]
     }

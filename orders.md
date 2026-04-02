@@ -81,6 +81,40 @@ GET https://apiamb.kosmoslogistic.ru/api?command=orders
                         "image": "https://host/images/GRM000013.jpeg"   // ссылка на картинку
                     }
                 ]
+            },
+            {
+                "order_no": "ord124",                           // номер заказа
+                "status": "DELIVERY",                           // статус
+                "comment": "Доставить с подъёма",              // коммент
+                "need_delivery": true,                          // нужна доставка
+                "address_ref": 456,                        // реф адреса клиента
+                "floor": 5,                                   // этаж
+                "entrance": 2,                                // подъезд
+                "intercom": "54321",                            // номер домофона
+                "elevator_type": "PASSENGER",                   // тип лифта
+                "full_address": "пр. Ленина, 50, к. 2, Москва", // полный адрес
+                "name": "ООО Компания",                         // название клиента
+                "phone": "+7 (495) 987-65-43",                  // телефон
+                "active": true,                                 // активен ли адрес
+                "plan_delivery_date": "28.11.2024",             // плановая дата отгрузки
+                "time_min": "10:00",                            // время от
+                "time_max": "14:00",                            // время до
+                "passes": [  // массив пропусков
+                    {
+                        "name": "Петр Сидоров",     // ФИО водителя
+                        "car_num": "567DEF234",     // номер машины
+                        "main": true                // главный пропуск
+                    }
+                ],
+                "items":    // грузовые места
+                [
+                    {
+                        "grm": "GRM000014", // id грузового места
+                        "weight": 2.5,      // вес
+                        "volume": 0.5,      // объём
+                        "image": "https://host/images/GRM000014.jpeg"   // ссылка на картинку
+                    }
+                ]
             }
         ]
     }

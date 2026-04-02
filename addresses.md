@@ -28,6 +28,7 @@ GET https://apiamb.kosmoslogistic.ru/api?command=addresses
     "addresses": [
         {
             "ref": 363,
+            "entrance": 1,
             "floor": 5,
             "intercom": "42",
             "elevator_type": "Грузовой",
@@ -37,6 +38,7 @@ GET https://apiamb.kosmoslogistic.ru/api?command=addresses
         },
         {
             "ref": 364,
+            "entrance": 2,
             "floor": 3,
             "intercom": "28",
             "elevator_type": "Легковой",
@@ -46,6 +48,7 @@ GET https://apiamb.kosmoslogistic.ru/api?command=addresses
         },
         {
             "ref": 487,
+            "entrance": 1,
             "floor": 7,
             "intercom": "51",
             "elevator_type": "Грузовой",
@@ -63,8 +66,7 @@ GET https://apiamb.kosmoslogistic.ru/api?command=addresses
 | Поле | Тип | Описание |
 |------|-----|---------|
 | addresses | array | массив адресов пользователя |
-| ref | integer | идентификатор адреса |
-| floor | integer | номер этажа |
+| ref | integer | идентификатор адреса || entrance | integer | номер подъезда || floor | integer | номер этажа |
 | intercom | string | номер кв/офиса |
 | elevator_type | string | тип лифта |
 | full_address | string | полный адрес доставки |
