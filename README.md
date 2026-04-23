@@ -37,6 +37,7 @@ https://apiamb.kosmoslogistic.ru/api
 - **[asns](asns.md)** - Получение списка ASN
 - **[asn](asn.md)** - Создание, изменение и отмена ASN
 - **[order_update](order_update.md)** - Обновление заказа
+- **[add_file_to_order](add_file_to_order.md)** - Добавление PDF-файла к заказу
 
 ## Общие коды ответов
 
