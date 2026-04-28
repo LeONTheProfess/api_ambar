@@ -87,6 +87,8 @@ GET https://apiamb.kosmoslogistic.ru/api?command=orders
                 "status": "DELIVERY",                           // статус
                 "comment": "Доставить с подъёма",              // коммент
                 "need_delivery": true,                          // нужна доставка
+                "movers_qty": 2,                                // количество грузчиков
+                "car_size": "M",                               // размер машины: S, M, L, XL
                 "address_ref": 456,                        // реф адреса клиента
                 "floor": 5,                                   // этаж
                 "entrance": 2,                                // подъезд

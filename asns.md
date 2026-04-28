@@ -86,6 +86,8 @@ GET https://apiamb.kosmoslogistic.ru/api?command=asns
                 "status": "DELIVERY",                           // статус
                 "comment": "Шкаф",                              // коммент
                 "need_delivery": true,                          // нужна доставка
+                "movers_qty": 2,                                // количество грузчиков
+                "car_size": "M",                               // размер машины: S, M, L, XL
                 "address_ref": 123,                        // реф адреса поставщика
                 "floor": "3",                                   // этаж
                 "entrance": "1",                                // подъезд
