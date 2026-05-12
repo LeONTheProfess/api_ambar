@@ -80,6 +80,13 @@ GET https://apiamb.kosmoslogistic.ru/api?command=orders
                         "volume": 0.2,      // объём
                         "image": "https://host/images/GRM000013.jpeg"   // ссылка на картинку
                     }
+                ],
+                "files": [  // массив файлов
+                    {
+                        "ref": "123",            // ссылка на файл
+                        "name": "invoice.pdf",       // имя файла
+                        "size": 23456                  // размер файла в байтах
+                    }
                 ]
             },
             {
@@ -115,6 +122,13 @@ GET https://apiamb.kosmoslogistic.ru/api?command=orders
                         "weight": 2.5,      // вес
                         "volume": 0.5,      // объём
                         "image": "https://host/images/GRM000014.jpeg"   // ссылка на картинку
+                    }
+                ],
+                "files": [  // массив файлов
+                    {
+                        "ref": "124",            // ссылка на файл
+                        "name": "contract.docx",      // имя файла
+                        "size": 102400                 // размер файла в байтах
                     }
                 ]
             }
