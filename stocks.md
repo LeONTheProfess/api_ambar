@@ -14,8 +14,18 @@ POST https://apiamb.kosmoslogistic.ru/api?command=stocks
 ## Тело запроса
 
 ```json
-{}
+{
+    "sort_order": "desc",   // порядок сортировки по дате: "desc" или "asc" (необязательно, по умолчанию "asc")
+    "status": "stored",     // фильтр по статусу: "stored", "ordered", "returned" (необязательно)
+    "page_size": 20,         // размер страницы (необязательно, максимум 50)
+    "page": 1                // номер страницы (необязательно)
+}
 ```
+
+Статусы для фильтрации:
+- `stored` — в хранении
+- `ordered` — в заказах
+- `returned` — возвращённые
 ---
 
 ## Ответы
@@ -29,15 +39,19 @@ POST https://apiamb.kosmoslogistic.ru/api?command=stocks
         "stocks":                       // массив остатков
         [
             {
-                "grm": "GRM000013",     // id грузового места
-                "weight": 1.2,          // вес
-                "volume": 0.2,          // объём
-                "qty": 1,               // количество 
-                "image": "https://host/images/GRM000013.jpeg", // ссылка на фото грузового места
-                "status": "stored",      // состояние товара: stored (хранение) или ordered (в заказе)
-                "comment": "Комментарий к ГРМ"  
+                "grm": "GRM010791",     // id грузового места
+                "weight": 1,             // вес
+                "volume": 1.544,         // объём
+                "qty": 13,               // количество
+                "date": "23.03.2026",  // дата хранения/обновления (используется для сортировки)
+                "image": "https://amphoto.kosmoslogistic.ru/s/p0llvdYYzGvLbPtfCGrKy_d", // ссылка на фото грузового места
+                "status": "stored",     // состояние товара: stored (хранение) или ordered (в заказе)
+                "comment": "Соевая мука"
             }
-        ]
+        ],
+        "ordered_qty": 2,    // суммарно в заказах
+        "stored_qty": 29,    // суммарно в хранении
+        "returned_qty": 59,  // суммарно возвращено
     }
 ```
 ---
