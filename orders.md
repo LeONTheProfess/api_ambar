@@ -83,9 +83,10 @@ GET https://apiamb.kosmoslogistic.ru/api?command=orders
                 ],
                 "files": [  // массив файлов
                     {
-                        "ref": "123",            // ссылка на файл
-                        "name": "invoice.pdf",       // имя файла
-                        "size": 23456                  // размер файла в байтах
+                        "ref": "123",           // ссылка на файл
+                        "name": "invoice.pdf",  // имя файла
+                        "size": 23456,          // размер файла в байтах
+                        "sticker": false        // стикер ли файл
                     }
                 ]
             },
@@ -127,8 +128,9 @@ GET https://apiamb.kosmoslogistic.ru/api?command=orders
                 "files": [  // массив файлов
                     {
                         "ref": "124",            // ссылка на файл
-                        "name": "contract.docx",      // имя файла
-                        "size": 102400                 // размер файла в байтах
+                        "name": "contract.docx", // имя файла
+                        "size": 102400,          // размер файла в байтах
+                        "sticker": false         // стикер ли файл   
                     }
                 ]
             }
