@@ -27,6 +27,7 @@ https://apiamb.kosmoslogistic.ru/api
 - **[userinfo_update](userinfo_update.md)** - Обновление информации о пользователе
 - **[addresses](addresses.md)** - Получение списка адресов пользователя
 - **[havedebit](havedebit.md)** - Проверить наличие задолженности
+- **[bills](bills.md)** - Получение списка счетов пользователя
 
 ### Склад и товары
 
