@@ -18,6 +18,7 @@ jobs:
       - name: Push mirror to GitLab
         run: |
           git remote add gitlab https://oauth2:${GITLAB_TOKEN}@git-lab.kosmoslogistic.ru/ambar/ambar-api.git
-          git push gitlab --mirror
+          git push gitlab 'refs/heads/*:refs/heads/*' --force
+          git push gitlab 'refs/tags/*:refs/tags/*' --force
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
