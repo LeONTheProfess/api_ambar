@@ -76,8 +76,10 @@ GET https://apiamb.kosmoslogistic.ru/api?command=orders
                 [
                     {
                         "grm": "GRM000013", // id грузового места
-                        "weight": 1.2,      // вес
-                        "volume": 0.2,      // объём
+                        "qty": 2,            // количество, отгруженное по заказу
+                        "not_load_qty": 1,   // количество, которое в итоге не было отгружено
+                        "weight": 1.2,       // вес
+                        "volume": 0.2,       // объём
                         "image": "https://host/images/GRM000013.jpeg"   // ссылка на картинку
                     }
                 ],
@@ -120,8 +122,10 @@ GET https://apiamb.kosmoslogistic.ru/api?command=orders
                 [
                     {
                         "grm": "GRM000014", // id грузового места
-                        "weight": 2.5,      // вес
-                        "volume": 0.5,      // объём
+                        "qty": 3,            // количество, отгруженное по заказу
+                        "not_load_qty": 0,   // количество, которое в итоге не было отгружено
+                        "weight": 2.5,       // вес
+                        "volume": 0.5,       // объём
                         "image": "https://host/images/GRM000014.jpeg"   // ссылка на картинку
                     }
                 ],
