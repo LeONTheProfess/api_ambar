@@ -17,10 +17,12 @@ POST https://apiamb.kosmoslogistic.ru/api?command=stocks
 {
     "sort_order": "desc",   // порядок сортировки по дате: "desc" или "asc" (необязательно, по умолчанию "asc")
     "status": "stored",     // фильтр по статусу: "stored", "ordered", "returned" (необязательно)
-    "page_size": 20,         // размер страницы (необязательно, максимум 50)
-    "page": 1                // номер страницы (необязательно)
+    "page_size": 50,         // размер страницы (по умолчанию 50, максимум 100, необязательно)
+    "page": 1                // номер страницы (по умолчанию 1, необязательно)
 }
 ```
+
+За один запрос возвращается одна страница. Для получения следующей страницы передайте её номер в `page`. Если `page_size` больше 100, API вернёт ошибку `400 Bad Request`.
 
 Статусы для фильтрации:
 - `stored` — в хранении
@@ -65,6 +67,16 @@ POST https://apiamb.kosmoslogistic.ru/api?command=stocks
     "error": "error"
 }
 ```
+
+Если `page_size` больше 100:
+
+```json
+{
+    "message": "Размер страницы не может быть больше 100.",
+    "error": "page_size_too_large"
+}
+```
+
 ---
 ### <span style="color: red;">403 Unauthorized</span>
 Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
@@ -87,5 +99,4 @@ POST https://apiamb.kosmoslogistic.ru/api?command=stocks
     "error": "error"
 }
 ```
-
 
