@@ -133,7 +133,8 @@ POST https://apiamb.kosmoslogistic.ru/api?command=asn
 
 ```json
     {
-        "result": "Ok"
+        "result": "Ok",
+        "asn_no", "123-00000123"
     }
 ```
 ---

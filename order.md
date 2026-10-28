@@ -83,7 +83,8 @@ POST https://apiamb.kosmoslogistic.ru/api?command=order
 
 ```json
     {
-        "result": "Ok"
+        "result": "Ok",
+        "order_no", "123-00000123"
     }
 ```
 ---
