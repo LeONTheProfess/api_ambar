@@ -51,17 +51,20 @@ POST https://apiamb.kosmoslogistic.ru/api?command=delivery_cost
   "error": "error",
   "message": "Не задан grms"
 }
-
+```
+```json
 {
   "error": "error",
   "message": "Задан пустой grm"
 }
-
+```
+```json
 {
   "error": "error",
   "message": "Задано неверное количество для grm GRM004310"
 }
-
+```
+```json
 {
   "error": "error",
   "message": "ГРМ GRM004310 не найдено"
@@ -70,37 +73,25 @@ POST https://apiamb.kosmoslogistic.ru/api?command=delivery_cost
 
 ---
 
-### <span style="color: red;">401 Unauthorized</span>
-Токен не задан или не передан в заголовке Authorization.
+---
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
 #### Тело ответа
+
 ```json
 {
-  "error": "access_denied",
-  "message": "Токен не задан."
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
-
 ---
-
-### <span style="color: red;">403 Forbidden</span>
-Токен невалиден или истёк срок действия.
-#### Тело ответа
-```json
-{
-  "error": "access_denied",
-  "message": "Причина ошибки авторизации"
-}
-```
-
----
-
 ### <span style="color: red;">404 Not Found</span>
 Клиент не найден.
 #### Тело ответа
 ```json
 {
-  "error": "error",
-  "message": "Клиент не найден"
+    "error": "error",
+    "message": "Клиент не найден"
 }
 ```
 
@@ -114,12 +105,14 @@ POST https://apiamb.kosmoslogistic.ru/api?command=delivery_cost
   "error": "error",
   "message": "Нет доступа к grm GRM004310"
 }
-
+```
+```json
 {
   "error": "error",
   "message": "Не задан тариф пользователя"
 }
-
+```
+```json
 {
   "error": "error",
   "message": "В тарифе пользователя не найдена услуга доставки"

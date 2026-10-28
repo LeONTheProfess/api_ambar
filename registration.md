@@ -64,13 +64,8 @@ POST https://apiamb.kosmoslogistic.ru/api?command=registration
 
 ```json
 {
-    "result": "error",
-    "errors":
-    [
-        {
-            "message": "Некорректные данные в запросе."
-        }
-    ]
+    "message": "Некорректные данные в запросе.",
+    "error": "error"
 }
 ```
 ---
@@ -80,12 +75,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=registration
 
 ```json
 {
-    "result": "error",
-    "errors":
-    [
-        {
-            "message": "Пользователь с таким email уже существует."
-        }
-    ]
+    "message": "Пользователь с таким email уже существует.",
+    "error": "error"
 }
 ```

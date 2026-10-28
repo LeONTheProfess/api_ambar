@@ -38,43 +38,31 @@ POST https://apiamb.kosmoslogistic.ru/api?command=choose_default_payment
 #### Тело ответа
 ```json
 {
-  "error": "invalid_request",
-  "message": "Некорректный запрос. Поле id обязательно."
+    "error": "invalid_request",
+    "message": "Некорректный запрос. Поле id обязательно."
 }
 ```
 
 ---
 
-### <span style="color: red;">401 Unauthorized</span>
-Токен не задан или не передан в заголовке Authorization.
+---
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
 #### Тело ответа
+
 ```json
 {
-  "error": "access_denied",
-  "message": "Токен не задан."
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
-
 ---
-
-### <span style="color: red;">403 Forbidden</span>
-Токен невалиден или истёк срок действия.
-#### Тело ответа
-```json
-{
-  "error": "access_denied",
-  "message": "Причина ошибки авторизации"
-}
-```
-
----
-
 ### <span style="color: red;">404 Not Found</span>
 Карта с указанным id не найдена.
 #### Тело ответа
 ```json
 {
-  "error": "not_found",
-  "message": "Карта с указанным id не найдена."
+    "error": "not_found",
+    "message": "Карта с указанным id не найдена."
 }
 ```

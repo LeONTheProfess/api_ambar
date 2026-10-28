@@ -35,37 +35,31 @@ POST https://apiamb.kosmoslogistic.ru/api?command=make_payment
 
 ---
 
-### <span style="color: red;">401 Unauthorized</span>
-Токен не задан или не передан в заголовке Authorization.
+---
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
 #### Тело ответа
+
 ```json
 {
-  "error": "access_denied",
-  "message": "Токен не задан."
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
-
 ---
-
-### <span style="color: red;">403 Forbidden</span>
-Токен невалиден или истёк срок действия.
-#### Тело ответа
-```json
-{
-  "error": "access_denied",
-  "message": "Причина ошибки авторизации"
-}
-```
-
----
-
 ### <span style="color: red;">404 Not Found</span>
 Клиент или метод оплаты не найден.
 #### Тело ответа
 ```json
 {
   "error": "error",
-  "message": "Клиент не найден" // или "Метод оплаты не найден"
+  "message": "Клиент не найден"
+}
+```
+```json
+{
+  "error": "error",
+  "message": "Метод оплаты не найден"
 }
 ```
 
@@ -77,7 +71,13 @@ POST https://apiamb.kosmoslogistic.ru/api?command=make_payment
 ```json
 {
   "error": "error",
-  "message": "Не задана сумма" // или "Ошибка оплаты cloudpayments <ReasonCode>"
+  "message": "Не задана сумма"
+}
+```
+```json
+{
+  "error": "error",
+  "message": "Ошибка оплаты cloudpayments <ReasonCode>"
 }
 ```
 
@@ -88,7 +88,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=make_payment
 #### Тело ответа
 ```json
 {
-  "error": "error",
-  "message": "Ошибка запроса cloudpayments <текст ошибки>"
+    "error": "error",
+    "message": "Ошибка запроса cloudpayments <текст ошибки>"
 }
 ```

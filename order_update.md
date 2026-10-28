@@ -75,67 +75,33 @@ POST https://apiamb.kosmoslogistic.ru/api?command=order
 
 ```json
 {
-  "result": "error",
-  "errors":
-  [
-    {
-      "message": "В запросе не задано plan_delivery_date."
-    }
-  ]
+    "message": "В запросе не задано plan_delivery_date.",
+    "error": "error"
 }
 ```
 
 ---
 
-### <span style="color: red;">401 Unauthorized</span>
-В запросе не указаны данные для авторизации.
+---
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
 #### Тело ответа
 
 ```json
 {
-  "result": "error",
-  "errors":
-  [
-    {
-      "message": "В запросе не указаны данные для авторизации."
-    }
-  ]
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
-
 ---
-
-### <span style="color: red;">403 Forbidden</span>
-Данные для авторизации неверны или доступ к ресурсу запрещен.
-#### Тело ответа
-
-```json
-{
-  "result": "error",
-  "errors":
-  [
-    {
-      "message": "Данные для авторизации неверны."
-    }
-  ]
-}
-```
-
----
-
 ### <span style="color: red;">404 Not Found</span>
 Заказ с указанным идентификатором не найден.
 #### Тело ответа
 
 ```json
 {
-  "result": "error",
-  "errors":
-  [
-    {
-      "message": "Заказ не найден."
-    }
-  ]
+    "message": "Заказ не найден.",
+    "error": "error"
 }
 ```
 
@@ -147,12 +113,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=order
 
 ```json
 {
-  "result": "error",
-  "errors":
-  [
-    {
-      "message": "Заказ уже обработан и не может быть изменен."
-    }
-  ]
+    "message": "Заказ уже обработан и не может быть изменен.",
+    "error": "error"
 }
 ```

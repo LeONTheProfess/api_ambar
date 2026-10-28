@@ -47,39 +47,28 @@ POST https://apiamb.kosmoslogistic.ru/api?command=address_add
 #### Тело ответа
 
 ```json
-    {
-        "error": "error",
-        "message": "Пустые данные : phone"
-    }
+{
+    "error": "error",
+    "message": "Пустые данные : phone"
+}
 ```
 или
 ```json
-    {
-        "error": "error",
-        "message": "Пустые данные : full_address"
-    }
+{
+    "error": "error",
+    "message": "Пустые данные : full_address"
+}
 ```
 ---
-### <span style="color: red;">401 Unauthorized</span>
-Токен не задан.
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
 #### Тело ответа
 
 ```json
-    {
-        "error": "access_denied",
-        "message": "Токен не задан."
-    }
-```
----
-### <span style="color: red;">403 Forbidden</span>
-Токен неверный или доступ запрещен.
-#### Тело ответа
-
-```json
-    {
-        "error": "access_denied",
-        "message": "Ошибка при проверке токена"
-    }
+{
+    "error": "access_denied",
+    "message": "<error message>"
+}
 ```
 ---
 ### <span style="color: red;">404 Not Found</span>
@@ -87,8 +76,8 @@ POST https://apiamb.kosmoslogistic.ru/api?command=address_add
 #### Тело ответа
 
 ```json
-    {
-        "error": "error",
-        "message": "Клиент не найден"
-    }
+{
+    "error": "error",
+    "message": "Клиент не найден"
+}
 ```

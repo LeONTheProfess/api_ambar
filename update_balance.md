@@ -39,15 +39,10 @@ PUT https://apiamb.kosmoslogistic.ru/api?command=update_balance
 #### Тело ответа
 
 ```json
-    {
-        "result": "error",
-        "errors":
-        [
-            {
-                "message": "В запросе не задано поле owner_id."
-            }
-        ]
-    }
+{
+    "message": "В запросе не задано поле owner_id.",
+    "error": "error"
+}
 ```
 ---
 ### <span style="color: red;">404 Not Found</span>
@@ -55,13 +50,8 @@ PUT https://apiamb.kosmoslogistic.ru/api?command=update_balance
 #### Тело ответа
 
 ```json
-    {
-        "result": "error",
-        "errors":
-        [
-            {
-                "message": "Ресурс не найден."
-            }
-        ]
-    }
+{
+    "message": "Ресурс не найден.",
+    "error": "error"
+}
 ```

@@ -240,7 +240,6 @@ GET http://apiamb.kosmoslogistic.ru/api?command=available_dates&doctype=order&de
 #### Пример ошибки
 ```json
 {
-    "success": false,
     "error": "field_not_found",
     "message": "Неверно задан doctype"
 }
@@ -248,7 +247,6 @@ GET http://apiamb.kosmoslogistic.ru/api?command=available_dates&doctype=order&de
 
 ```json
 {
-    "success": false,
     "error": "field_not_found",
     "message": "Неверно задан delivery"
 }

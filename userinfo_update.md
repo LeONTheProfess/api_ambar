@@ -66,17 +66,20 @@ POST https://apiamb.kosmoslogistic.ru/api?command=userinfo_update
 
 ```json
 {
-  "result": "error",
-  "message": "Некорректные данные в запросе."
+    "message": "Некорректные данные в запросе.",
+    "error": "error"
 }
 ```
 
-### <span style="color: red;">401 Unauthorized</span>
-Неверный или отсутствующий токен авторизации.
+---
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
+#### Тело ответа
 
 ```json
 {
-  "result": "error",
-  "message": "Unauthorized"
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
+---

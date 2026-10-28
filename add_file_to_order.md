@@ -42,36 +42,26 @@ POST `https://apiamb.kosmoslogistic.ru/api?command=add_file_to_order&order_no=00
 
 ## Ошибки (по коду обработки)
 
-### 401 Unauthorized
-
-Токен не передан.
-
-```json
-{
-  "error": "access_denied",
-  "message": "Токен не задан."
-}
-```
-
-### 403 Forbidden
-
-Неверный/просроченный токен.
+---
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
+#### Тело ответа
 
 ```json
 {
-  "error": "access_denied",
-  "message": "<текст ошибки проверки токена>"
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
-
+---
 ### 403 Forbidden
 
 Не передан `order_no`.
 
 ```json
 {
-  "error": "field_not_found",
-  "message": "Не задан order_ref"
+    "error": "field_not_found",
+    "message": "Не задан order_ref"
 }
 ```
 
@@ -83,8 +73,8 @@ POST `https://apiamb.kosmoslogistic.ru/api?command=add_file_to_order&order_no=00
 
 ```json
 {
-  "error": "order_not_found",
-  "message": "Заказ не найден."
+    "error": "order_not_found",
+    "message": "Заказ не найден."
 }
 ```
 
@@ -94,8 +84,8 @@ POST `https://apiamb.kosmoslogistic.ru/api?command=add_file_to_order&order_no=00
 
 ```json
 {
-  "error": "wrong_extension_file",
-  "message": "Неподдерживаемый тип файла"
+    "error": "wrong_extension_file",
+    "message": "Неподдерживаемый тип файла"
 }
 ```
 
@@ -105,8 +95,8 @@ POST `https://apiamb.kosmoslogistic.ru/api?command=add_file_to_order&order_no=00
 
 ```json
 {
-  "error": "file_is_exists",
-  "message": "Файл был загружен ранее"
+    "error": "file_is_exists",
+    "message": "Файл был загружен ранее"
 }
 ```
 
@@ -116,7 +106,7 @@ POST `https://apiamb.kosmoslogistic.ru/api?command=add_file_to_order&order_no=00
 
 ```json
 {
-  "error": "file_is_empty",
-  "message": "Файл не был добавлен в запрос"
+    "error": "file_is_empty",
+    "message": "Файл не был добавлен в запрос"
 }
 ```

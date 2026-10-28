@@ -36,43 +36,26 @@ POST `https://apiamb.kosmoslogistic.ru/api?command=delete_file`
 
 ## Ошибки
 
-### 401 Unauthorized
-
-Токен не был передан.
-
-```json
-{
-  "error": "access_denied",
-  "message": "Токен не задан."
-}
-```
-
-### 403 Forbidden
-
-Токен недействителен или файл не принадлежит клиенту.
+---
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
+#### Тело ответа
 
 ```json
 {
-  "error": "access_denied",
-  "message": "<текст ошибки проверки токена>"
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
-
-```json
-{
-  "error": "error",
-  "message": "Файл не найден!"
-}
-```
-
+---
 ### 404 Not Found
 
 Клиент, связанный с токеном, не найден.
 
 ```json
 {
-  "error": "error",
-  "message": "Клиент не найден"
+    "error": "error",
+    "message": "Клиент не найден"
 }
 ```
 
@@ -82,7 +65,7 @@ POST `https://apiamb.kosmoslogistic.ru/api?command=delete_file`
 
 ```json
 {
-  "error": "error",
-  "message": "Только просмотр!"
+    "error": "error",
+    "message": "Только просмотр!"
 }
 ```

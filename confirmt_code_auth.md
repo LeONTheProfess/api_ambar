@@ -40,7 +40,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=confirmt_code_auth
 
 ```json
 {
-  "result": "error",
-  "message": "Неверный код подтверждения или отсутствует поле."
+    "message": "Неверный код подтверждения или отсутствует поле.",
+    "error": "error"
 }
 ```

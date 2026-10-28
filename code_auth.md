@@ -40,7 +40,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=code_auth
 
 ```json
 {
-  "result": "error",
-  "message": "В запросе не задано поле phone."
+    "message": "В запросе не задано поле phone.",
+    "error": "error"
 }
 ```

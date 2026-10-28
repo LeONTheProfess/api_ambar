@@ -41,13 +41,8 @@ POST https://apiamb.kosmoslogistic.ru/api?command=pay_all_services
 
 ```json
 {
-    "result": "error",
-    "errors":
-    [
-        {
-            "message": "В запросе не задано поле owner_id."
-        }
-    ]
+    "message": "В запросе не задано поле owner_id.",
+    "error": "error"
 }
 ```
 ---
@@ -57,12 +52,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=pay_all_services
 
 ```json
 {
-    "result": "error",
-    "errors":
-    [
-        {
-            "message": "Ресурс не найден."
-        }
-    ]
+    "message": "Ресурс не найден.",
+    "error": "error"
 }
 ```

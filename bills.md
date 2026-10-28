@@ -51,39 +51,25 @@ GET https://apiamb.kosmoslogistic.ru/api?command=bills
 
 ---
 
-### <span style="color: red;">401 Unauthorized</span>
-Токен не задан или не передан в заголовке Authorization.
-
+---
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
 #### Тело ответа
+
 ```json
 {
-  "error": "access_denied",
-  "message": "Токен не задан."
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
-
 ---
-
-### <span style="color: red;">403 Forbidden</span>
-Токен невалиден или истёк срок действия.
-
-#### Тело ответа
-```json
-{
-  "error": "access_denied",
-  "message": "Причина ошибки авторизации"
-}
-```
-
----
-
 ### <span style="color: red;">404 Not Found</span>
 Пользователь не найден.
 
 #### Тело ответа
 ```json
 {
-  "error": "error",
-  "message": "Пользователь не найден"
+    "error": "error",
+    "message": "Пользователь не найден"
 }
 ```

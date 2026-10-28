@@ -39,31 +39,22 @@ POST https://apiamb.kosmoslogistic.ru/api?command=make_question
 #### Тело ответа
 ```json
 {
-  "error": "error",
-  "message": "Пустые данные : theme"
+    "error": "error",
+    "message": "Пустые данные : theme"
 }
 ```
 
 ---
 
-### <span style="color: red;">401 Unauthorized</span>
-Токен не задан или не передан в заголовке Authorization.
-#### Тело ответа
-```json
-{
-  "error": "access_denied",
-  "message": "Токен не задан."
-}
-```
-
 ---
-
-### <span style="color: red;">403 Forbidden</span>
-Токен невалиден или истёк срок действия.
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
 #### Тело ответа
+
 ```json
 {
-  "error": "access_denied",
-  "message": "Причина ошибки авторизации"
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
+---

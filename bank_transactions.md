@@ -48,21 +48,15 @@ GET https://apiamb.kosmoslogistic.ru/api?command=bank_transactions
 
 ## Ошибки
 
-#### 401 Unauthorized
+---
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
+#### Тело ответа
 
 ```json
 {
-    "result": "error",
-    "error": "В запросе не указаны данные для авторизации."
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
-
-#### 403 Forbidden
-
-```json
-{
-    "result": "error",
-    "error": "Доступ запрещён."
-}
-```
-
+---

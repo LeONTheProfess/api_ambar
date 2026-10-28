@@ -36,47 +36,21 @@ GET https://apiamb.kosmoslogistic.ru/api?command=debtors
 #### Тело ответа
 
 ```json
-    {
-        "result": "error",
-        "errors":
-        [
-            {
-                "message": "В запросе не задано поле owner_id."
-            }
-        ]
-    }
+{
+    "message": "В запросе не задано поле owner_id.",
+    "error": "error"
+}
 ```
 ---
-### <span style="color: red;">401 Unauthorized</span>
-В запросе не указаны данные для авторизации.
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
 #### Тело ответа
 
 ```json
-    {
-        "result": "error",
-        "errors":
-        [
-            {
-                "message": "В запросе не указаны данные для авторизации."
-            }
-        ]
-    }
-```
----
-### <span style="color: red;">403 Forbidden</span>
-Данные для авторизации неверны или доступ к ресурсу запрещен.
-#### Тело ответа
-
-```json
-    {
-        "result": "error",
-        "errors":
-        [
-            {
-                "message": "Данные для авторизации неверны."
-            }
-        ]
-    }
+{
+    "error": "access_denied",
+    "message": "<error message>"
+}
 ```
 ---
 ### <span style="color: red;">404 Not Found</span>
@@ -84,13 +58,8 @@ GET https://apiamb.kosmoslogistic.ru/api?command=debtors
 #### Тело ответа
 
 ```json
-    {
-        "result": "error",
-        "errors":
-        [
-            {
-                "message": "Ресурс не найден."
-            }
-        ]
-    }
+{
+    "message": "Ресурс не найден.",
+    "error": "error"
+}
 ```

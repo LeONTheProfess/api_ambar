@@ -40,32 +40,21 @@ POST https://apiamb.kosmoslogistic.ru/api?command=address_del
 #### Тело ответа
 
 ```json
-    {
-        "error": "error",
-        "message": "Неверно задан адрес"
-    }
+{
+    "error": "error",
+    "message": "Неверно задан адрес"
+}
 ```
 ---
-### <span style="color: red;">401 Unauthorized</span>
-Токен не задан.
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
 #### Тело ответа
 
 ```json
-    {
-        "error": "access_denied",
-        "message": "Токен не задан."
-    }
-```
----
-### <span style="color: red;">403 Forbidden</span>
-Токен неверный или доступ запрещен.
-#### Тело ответа
-
-```json
-    {
-        "error": "access_denied",
-        "message": "Ошибка при проверке токена"
-    }
+{
+    "error": "access_denied",
+    "message": "<error message>"
+}
 ```
 ---
 ### <span style="color: red;">404 Not Found</span>
@@ -73,10 +62,10 @@ POST https://apiamb.kosmoslogistic.ru/api?command=address_del
 #### Тело ответа
 
 ```json
-    {
-        "error": "error",
-        "message": "Клиент не найден"
-    }
+{
+    "error": "error",
+    "message": "Клиент не найден"
+}
 ```
 ---
 ### <span style="color: red;">501 Not Implemented</span>
@@ -84,8 +73,8 @@ POST https://apiamb.kosmoslogistic.ru/api?command=address_del
 #### Тело ответа
 
 ```json
-    {
-        "error": "error",
-        "message": "Только просмотр!"
-    }
+{
+    "error": "error",
+    "message": "Только просмотр!"
+}
 ```

@@ -76,19 +76,15 @@ GET https://apiamb.kosmoslogistic.ru/api?command=addresses
 
 ---
 
-### <span style="color: red;">401 Unauthorized</span>
-
-Неверный или отсутствующий токен авторизации.
-
+---
+### <span style="color: red;">403 Unauthorized</span>
+Данные для авторизации не указаны или указаны неверно, либо пользователю запрещён доступ к ресурсу.
 #### Тело ответа
 
 ```json
 {
-    "result": "error",
-    "errors": [
-        {
-            "message": "Неверный или отсутствующий токен авторизации"
-        }
-    ]
+    "error": "access_denied",
+    "message": "<error message>"
 }
 ```
+---
