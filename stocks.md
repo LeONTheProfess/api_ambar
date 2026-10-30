@@ -17,6 +17,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=stocks
 {
     "sort_order": "desc",   // порядок сортировки по дате: "desc" или "asc" (необязательно, по умолчанию "asc")
     "status": "stored",     // фильтр по статусу: "stored", "ordered", "returned" (необязательно)
+    "filter": "GRM010791",  // поиск по номеру ГРМ или комментарию (необязательно)
     "page_size": 50,         // размер страницы (по умолчанию 50, максимум 100, необязательно)
     "page": 1                // номер страницы (по умолчанию 1, необязательно)
 }
@@ -99,4 +100,3 @@ POST https://apiamb.kosmoslogistic.ru/api?command=stocks
     "error": "error"
 }
 ```
-
