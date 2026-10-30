@@ -17,6 +17,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=asn
 
 ```json
 {
+  "request_id": "550e8400-e29b-41d4-a716-446655440000", // UUID запроса для идемпотентности
   "comment": "Велосипед, диван",        // комментарий (не обязательно)
   "need_delivery": true,                // нужна доставка (обязательно)
   "plan_delivery_date": "27.11.2024",   // плановая дата доставки (обязательно)
@@ -42,6 +43,7 @@ POST https://apiamb.kosmoslogistic.ru/api?command=asn
 
 ```json
 {
+  "request_id": "550e8400-e29b-41d4-a716-446655440000", // UUID запроса для идемпотентности
   "comment": "Велосипед, диван",        // комментарий (не обязательно)
   "need_delivery": false,               // нужна доставка (обязательно)
   "plan_delivery_date": "27.11.2024",   // плановая дата доставки (обязательно)
@@ -132,11 +134,13 @@ POST https://apiamb.kosmoslogistic.ru/api?command=asn
 #### Тело ответа
 
 ```json
-    {
-        "result": "Ok",
-        "asn_no", "123-00000123"
-    }
+{
+    "result": "Ok",
+    "asn_no": "123-00000123"
+}
 ```
+
+Если ASN с таким `request_id` уже существует, метод возвращает успешный ответ с `result: "Ok"` и номером существующего ASN в `asn_no`. Для повторного запроса используйте тот же `request_id`.
 ---
 ### <span style="color: red;">400 Bad Request</span>
 Запрос содержит неправильные данные.
@@ -170,6 +174,5 @@ POST https://apiamb.kosmoslogistic.ru/api?command=asn
     "error": "error"
 }
 ```
-
 
 
